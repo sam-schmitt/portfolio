@@ -4,7 +4,7 @@ import Home from "../screens/home/home";
 import Contact from "../screens/home/contact";
 
 function HomeRouter() {
-	let { path, url } = useRouteMatch();
+	let { path } = useRouteMatch();
 
 	return (
 		<div className='home-router'>
