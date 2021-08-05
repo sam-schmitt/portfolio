@@ -1,23 +1,21 @@
 import React from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import Home from "../screens/home/home";
-import Contact from "../screens/home/contact";
+import Blog from "../screens/blog/blog";
+import NavBar from "../components/NavBar";
 
-function HomeRouter() {
+function BlogRouter() {
 	let { path } = useRouteMatch();
 
 	return (
-		<div className='home-router'>
+		<div>
 			<Switch>
-				<Route path={`${path}/contact`}>
-					<Contact />
-				</Route>
 				<Route path={"/"}>
-					<Home />
+					<Blog />
 				</Route>
 			</Switch>
 		</div>
 	);
 }
 
-export default HomeRouter;
+export default BlogRouter;

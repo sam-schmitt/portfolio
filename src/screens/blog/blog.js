@@ -1,7 +1,7 @@
 // screen where admins can change things about the group
 import React from "react";
 
-export default function Home(props) {
+export default function Blog(props) {
 	return (
 		<div
 			style={{
@@ -11,7 +11,7 @@ export default function Home(props) {
 				height: "90vh",
 			}}
 		>
-			<h1>Welcome</h1>
+			<h1>Blogs</h1>
 		</div>
 	);
 }

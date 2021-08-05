@@ -11,7 +11,7 @@ export default function Home(props) {
 				height: "90vh",
 			}}
 		>
-			<h1>Welcome</h1>
+			<h1>Projects</h1>
 		</div>
 	);
 }
