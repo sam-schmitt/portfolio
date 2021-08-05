@@ -1,0 +1,405 @@
+@use './var';
+@import "./colors";
+@import "./mixins";
+@import "./theme";
+// STYLE: CONTAINERS
+.sub-container {
+	@include flex-container(column, center, center, nowrap);
+	padding: 1rem;
+	margin: 1rem;
+}
+.shadow-card {
+	@extend .sub-container;
+	overflow: hidden;
+	border-radius: 2rem;
+	box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.4);
+	@include themed() {
+		background-color: t(var.$fg);
+	}
+	max-height: 100%;
+}
+.member-card {
+	@include themed() {
+		background-color: t(var.$bg);
+	}
+	width: max-content;
+	box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.25);
+	@include flex-container(row, flex-start, center, nowrap);
+	border-radius: 1rem;
+	padding: 0.75rem;
+	margin: 0.5rem;
+	.avatar {
+		width: 4rem;
+		height: 4rem;
+	}
+	.content {
+		padding-left: 1rem;
+	}
+}
+.update-card {
+	@include themed() {
+		background-color: t(var.$bg);
+	}
+	width: 100%;
+	box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.25);
+	border-radius: 1rem;
+	overflow: hidden;
+	margin: 0.5rem 0;
+	.update-header {
+		@include flex-container(row, flex-start, center, nowrap);
+		@include themed() {
+			background-color: t(var.$fg);
+		}
+		width: max-content;
+		border-bottom-right-radius: 1rem;
+		.stats-container {
+			@extend .flex-container-row-end;
+			padding-right: 1rem;
+
+			div {
+				padding: 0rem 0.5rem;
+				p {
+					@include text(var.$font-title, var.$default);
+				}
+				.icon {
+					@include themed() {
+						color: t(var.$text-secondary);
+						margin-right: 0.25rem;
+					}
+				}
+			}
+		}
+
+		.name-tag {
+			position: relative;
+			top: 0;
+			left: 0;
+			padding: 0.5rem;
+			width: max-content;
+			border-bottom-right-radius: 1rem;
+			@include flex-container(row, flex-start, center, nowrap);
+			@include themed() {
+				background-color: t(var.$primary-default);
+			}
+			.profile-pic {
+				padding-right: 1rem;
+			}
+			p .author {
+				padding-left: 1rem;
+			}
+		}
+	}
+	.content {
+		padding: 1rem;
+	}
+}
+.dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	margin: 0 0.35rem;
+	border-radius: 0.1rem;
+	transform: rotateZ(45deg);
+	@include themed() {
+		background-color: t(var.$border);
+	}
+}
+.card {
+	border-width: 1px;
+	border-style: solid;
+	@include themed() {
+		background-color: t(var.$bg);
+		border-color: t(var.$border);
+	}
+	padding: 0.5rem 1rem 0.5rem 0rem;
+	border-radius: 0.5rem;
+	@include flex-container(row, flex-start, center, nowrap);
+	overflow: hidden;
+	width: clamp(10rem, 100%, 40rem);
+	.accent-line {
+		height: 60%;
+		width: 0.5rem;
+		flex: 1;
+		position: absolute;
+		background-color: blue;
+	}
+
+	.card-content {
+		padding-left: 1rem;
+		.card-header {
+			@include flex-container(row, flex-start, center, nowrap);
+			.picture {
+				width: 3.5rem;
+				height: 3.5rem;
+				margin: 0.25rem;
+			}
+			.text {
+				.top {
+					@include flex-container(row, flex-start, center, nowrap);
+
+					button {
+						@include flex-container(row, flex-start, center, nowrap);
+						p {
+							padding-inline-start: 0.35rem;
+						}
+					}
+				}
+				.bottom {
+					.topic {
+						margin-left: 0.35rem;
+						padding: 0.15rem 0.5rem;
+						width: max-content;
+						border-width: 1px;
+						border-style: solid;
+						border-radius: 0.25rem;
+						@include themed() {
+							border-color: t(var.$text);
+						}
+					}
+				}
+			}
+		}
+		.option {
+			@include flex-container(row, space-between, center, nowrap);
+			border-width: 2px;
+			border-style: solid;
+			padding: 0.25rem 0.5rem;
+			margin: 0.5rem 0rem;
+			border-radius: 0.25rem;
+			@include themed() {
+				border-color: t(var.$border);
+			}
+		}
+	}
+}
+.empty-list-container {
+	@include flex-container(column, center, center, nowrap);
+	@include themed() {
+		background-color: t(var.$bg);
+	}
+	padding: 1.5rem;
+	@extend .mx-auto;
+	border-radius: 0.75rem;
+	width: 100%;
+	box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.25);
+}
+.explore-topic-button {
+	.stats-container {
+		@include flex-container(row, flex-end, center, nowrap);
+	}
+}
+// STYLE: SETTINGS
+.preferences-container {
+	width: 100%;
+	.sub-title {
+		width: min-content;
+	}
+	.preference {
+		width: 100%;
+		border-radius: 1rem;
+		padding: 0.75rem;
+		margin: 0.5rem 0rem;
+		box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.25);
+		@include themed() {
+			background-color: t(var.$bg);
+		}
+		label {
+			margin-bottom: 0.5rem;
+			@include flex-container(row, space-between, flex-start, nowrap);
+		}
+	}
+}
+// STYLE: INPUTS
+
+.text-field-wrapper {
+	margin: 0.75rem 0rem;
+	width: 100%;
+	flex: 1;
+	.input {
+		border-top-left-radius: 0.3rem;
+		border-top-right-radius: 0.3rem;
+		width: 100%;
+		min-height: 2rem;
+	}
+	.label {
+		@include themed() {
+			color: t(var.$text-secondary);
+		}
+	}
+	.password {
+		-webkit-text-security: disc;
+		@include themed() {
+			color: t(var.$text);
+		}
+	}
+	.bg {
+		@include themed() {
+			background-color: t(var.$bg);
+			color: t(var.$text);
+		}
+	}
+	.fg {
+		@include themed() {
+			background-color: t(var.$fg);
+		}
+	}
+
+	.text-field {
+		width: 100%;
+		margin: 0.5rem;
+		padding: 1rem;
+		@include themed() {
+			background-color: t(var.$bg);
+			color: t(var.$text);
+		}
+	}
+	.input-text {
+		@include themed() {
+			color: t(var.$text);
+		}
+	}
+	.input-placeholder {
+		@include themed() {
+			color: t(var.$text);
+		}
+	}
+}
+// STYLE: BUTTONS
+.button {
+	padding: 1rem 2rem;
+	border-radius: 0.25rem;
+	color: inherit;
+	margin: 0.25rem 0rem;
+}
+.nav-button {
+	padding: 0.5rem auto 0.5rem 0.5rem;
+}
+.button-wrapper {
+	width: 100%;
+	border-radius: 0.6rem;
+
+	.logo {
+		@extend .button;
+		@include themed() {
+			background: t(var.$gradient-logo);
+			color: t(var.$light);
+		}
+		border-width: 1px;
+		border-style: hidden;
+	}
+	.large {
+		padding: 0.6rem 1.2rem;
+		min-width: 8rem;
+		border-radius: 0.6rem;
+		p {
+			@include text(var.$font-title, var.$M);
+		}
+	}
+
+	.default {
+		padding: 0.45rem 0.9rem;
+		min-width: 6rem;
+		border-radius: 0.625rem;
+		p {
+			@include text(var.$font-title, var.$default);
+		}
+	}
+	.small {
+		padding: 0.1rem 0.1rem;
+		border-radius: 0.5rem;
+		p {
+			@include text(var.$font-title, var.$S);
+		}
+	}
+	.primary {
+		@extend .button;
+		@include themed() {
+			background: t(var.$gradient-primary);
+			// color: t(var.$light);
+		}
+		border-width: 1px;
+		border-style: hidden;
+		p {
+			@include themed() {
+				color: t(var.$light);
+			}
+		}
+	}
+	.secondary {
+		@extend .button;
+		@include themed() {
+			outline-color: t(var.$text);
+			background-color: t(var.$bg);
+		}
+		outline-width: 1px;
+		outline-offset: 1px;
+		border-style: solid;
+	}
+
+	.disabled {
+		@extend .button;
+		@include themed() {
+			background: t(var.$gradient-disabled);
+			color: t(var.$light);
+		}
+	}
+	.nav {
+		@extend .nav-button;
+	}
+}
+.button-wrapper:hover {
+	transform: scale(1.02);
+	opacity: 0.7;
+	// box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.icon {
+	border-radius: 50%;
+	@include flex-container(row, center, center, nowrap);
+}
+.icon-wrapper {
+	.primary {
+		@extend .icon;
+		@include themed() {
+			background: t(var.$gradient-primary);
+		}
+	}
+	.secondary {
+		@extend .icon;
+
+		border-width: 1px;
+		border-style: solid;
+		@include themed() {
+			border-color: t(var.$border);
+		}
+	}
+	.disabled {
+		@extend .icon;
+
+		@include themed() {
+			background: t(var.$gradient-disabled);
+		}
+	}
+	.large {
+		width: 3.25rem;
+		height: 3.25rem;
+	}
+	.default {
+		width: 2.25rem;
+		height: 2.25rem;
+	}
+	.small {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+	.large-container {
+		width: 3.75rem;
+		height: 3.75rem;
+	}
+	.default-container {
+		width: 2.75rem;
+		height: 2.75rem;
+	}
+	.small-container {
+		width: 1.75rem;
+		height: 1.75rem;
+	}
+}

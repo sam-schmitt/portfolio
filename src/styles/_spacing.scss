@@ -1,0 +1,138 @@
+@use 'var';
+@import "./mixins";
+
+.full-size {
+	width: 100%;
+	height: 100%;
+}
+//  STYLE: WIDTH
+
+.w-full {
+	width: 100%;
+}
+.w-80 {
+	width: 80%;
+}
+// STYLE: EVEN
+.even-spacing-XS {
+	@include even-spacing(var.$XS, var.$XS);
+}
+.even-spacing-S {
+	@include even-spacing(var.$S, var.$S);
+}
+.even-spacing-default {
+	@include even-spacing(var.$default, var.$default);
+}
+.even-spacing-M {
+	@include even-spacing(var.$M, var.$M);
+}
+.even-spacing-L {
+	@include even-spacing(var.$L, var.$L);
+}
+.even-spacing-XL {
+	@include even-spacing(var.$XL, var.$XL);
+}
+.even-spacing-XXL {
+	@include even-spacing(var.$XXL, var.$XXL);
+}
+
+// STYLE: MARGIN
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.m-XS {
+	margin: var.$XS;
+}
+.m-S {
+	margin: var.$S;
+}
+.m-default {
+	margin: var.$default;
+}
+.m-M {
+	margin: var.$M;
+}
+.m-L {
+	margin: var.$L;
+}
+.m-XL {
+	margin: var.$XL;
+}
+.m-XXL {
+	margin: var.$XXL;
+}
+
+// STYLE: PADDING
+.p-XS {
+	padding: var.$XS;
+}
+.p-S {
+	padding: var.$S;
+}
+.p-default {
+	padding: var.$default;
+}
+.p-M {
+	padding: var.$M;
+}
+.p-L {
+	padding: var.$L;
+}
+.p-XL {
+	padding: var.$XL;
+}
+.p-XXL {
+	padding: var.$XXL;
+}
+
+// STYLE: FLEX-CONTAINERS
+.flex-container-col-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.flex-container-col-start {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.flex-container-row-between {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.flex-container-row-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.flex-container-row-start {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+.flex-container-row-end {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+.flex-container-row-around {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.flex-container-row-evenly {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}

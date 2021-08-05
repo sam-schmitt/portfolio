@@ -1,0 +1,129 @@
+:root {
+	--COLOR_PRIMARY_DEFAULT: #6840d9;
+	--COLOR_PRIMARY_LIGHT: #8f67ff;
+	--COLOR_PRIMARY_DARK: #25009f;
+
+	--COLOR_ACCENT1_DEFAULT: #55bdde;
+	--COLOR_ACCENT1_LIGHT: #8ed6ff;
+	--COLOR_ACCENT1_DARK: #0085be;
+
+	--COLOR_ACCENT2_DEFAULT: #f41690;
+	--COLOR_ACCENT2_LIGHT: #ff61c0;
+	--COLOR_ACCENT2_DARK: #bc0063;
+
+	--COLOR_BACKGROUND_DARK: #151515;
+	--COLOR_FOREGROUND_DARK: #212121;
+	--COLOR_BACKGROUND_LIGHT: #fcfcfc;
+	--COLOR_FOREGROUND_LIGHT: #ebebeb;
+	--COLOR_INACTIVE: #777;
+	--COLOR_BORDER: #888;
+	--COLOR_URGENT: #ff0019;
+	--COLOR_SUCCESS: #25c448;
+
+	/* 
+	--GRADIENT_PRIMARY: [  #6840D9 ,  #8F67FF  ];
+	--GRADIENT_ACCENT1: [  #55BDDE ,  #8ED6FF  ];
+	--GRADIENT_ACCENT2: [  #FF61C0 ,  #FF61C0  ];
+	--GRADIENT_URGENT: [  #ed7286 ,  #e0586e  ];
+	--GRADIENT_LOGO: [  #F41690 ,  #8D35D1 ,  #55BDDE  ];
+	--GRADIENT_DISABLED: [  #777777 ,  #999999  ]; */
+}
+.primary {
+	background-color: var(--COLOR_PRIMARY_DEFAULT);
+}
+.primary-light {
+	background-color: var(--COLOR_PRIMARY_LIGHT);
+}
+.primary-dark {
+	background-color: var(--COLOR_PRIMARY_DARK);
+}
+/* CONTAINERS */
+.container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.sub-container {
+	background-color: var(--COLOR_FOREGROUND_LIGHT);
+	padding: 0.75em;
+	margin: 1em;
+}
+.navbar {
+	background-color: var(--COLOR_FOREGROUND_LIGHT);
+}
+.header-container {
+	height: 10%;
+	width: 100%;
+	background-color: var(--COLOR_PRIMARY_LIGHT);
+}
+/* FORMS */
+.text-input-primary {
+	margin: 0.5rem;
+}
+
+/* FLEX CONTAINERS */
+.flex-container-col-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.flex-container-col-start {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.flex-container-row-between {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.flex-container-row-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.flex-container-row-start {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+.flex-container-row-end {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+.flex-container-row-around {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.flex-container-row-evenly {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.h-full {
+	height: 100vh;
+}
+.align-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.no-bullet {
+	list-style-type: none;
+}

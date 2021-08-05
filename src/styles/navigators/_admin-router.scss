@@ -1,0 +1,248 @@
+@use "../var";
+@import "../colors";
+@import "../theme";
+@import "../spacing";
+@import "../typography";
+
+.admin-grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	grid-template-rows: 50% 50%;
+	justify-content: stretch;
+
+	.members,
+	.pending-members,
+	.group-data,
+	.group-settings,
+	.latest-update,
+	.create-update,
+	.previous-updates,
+	.current-priority,
+	.previous-priority {
+		.shadow-card {
+			padding: 1rem;
+			@include flex-container(column, flex-start, flex-start, nowrap);
+			@include themed() {
+				background: t(var.$bg);
+			}
+			h4 {
+				margin-left: 1rem;
+			}
+			hr {
+				@extend .w-full;
+			}
+			li {
+				width: 100%;
+			}
+
+			.member-card {
+				width: 100%;
+
+				h5 {
+					padding-left: 0.35rem;
+				}
+			}
+		}
+	}
+	.members,
+	.group-data,
+	.latest-update,
+	.current-priority {
+		grid-column: 1/2;
+		grid-row: 1/3;
+		.shadow-card {
+			@include themed() {
+				background: linear-gradient(
+					200deg,
+					t(var.$primary-default) -10%,
+					transparent 10%,
+					transparent 100%
+				);
+			}
+		}
+	}
+	.pending-members,
+	.create-update,
+	.previous-priority,
+	.group-settings {
+		grid-column: 2/3;
+		grid-row: 1/3;
+		.shadow-card {
+			@include themed() {
+				background: linear-gradient(
+					200deg,
+					t(var.$accent1-default) -10%,
+					transparent 40%,
+					transparent 100%
+				);
+			}
+		}
+	}
+	.invited-members,
+	.previous-update,
+	.previous-updates {
+		grid-column: 3/4;
+		grid-row: 1/3;
+		.shadow-card {
+			@include themed() {
+				background: linear-gradient(
+					200deg,
+					t(var.$accent2-default) -20%,
+					transparent 40%,
+					transparent 100%
+				);
+			}
+		}
+	}
+}
+.admin-settings {
+	.group-data {
+		.shadow-card {
+			.section-1 {
+				padding: 0.5rem;
+				width: 100%;
+				@include flex-container(row, flex-start, center, nowrap);
+				.avatar-container {
+					@include flex-container(row, flex-start, flex-end, nowrap);
+					#change-group-pic-button {
+						height: 2rem;
+						visibility: hidden;
+					}
+					.avatar {
+						width: 5rem;
+						height: 5rem;
+					}
+					.edit-avatar {
+						position: relative;
+						margin-bottom: -0.5rem;
+						margin-left: -1.5rem;
+						width: 2rem;
+						height: 2rem;
+						@include flex-container(row, center, center, nowrap);
+						border-radius: 50%;
+						border-width: 1px;
+						border-style: solid;
+						@include themed() {
+							background-color: t(var.$bg);
+							border-color: t(var.$border);
+						}
+						.edit {
+							@extend .mx-auto;
+						}
+					}
+				}
+				.content {
+					@extend .w-full;
+					hr {
+						margin: 0.25rem 0;
+					}
+					.top {
+						@include flex-container(row, flex-start, flex-end, nowrap);
+						.edit {
+							margin-left: 0.25rem;
+							margin-bottom: 0.25rem;
+						}
+					}
+					.bottom {
+						@include flex-container(row, flex-start, flex-start, nowrap);
+					}
+				}
+			}
+			.group-stats-container {
+				@include flex-container(row, center, center, nowrap);
+				@include themed() {
+					background-color: t(var.$fg);
+				}
+				border-radius: 1rem;
+				overflow: hidden;
+				height: min-content;
+				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				margin: 1rem 0;
+				.stats {
+					width: 33.33%;
+				}
+				.separator {
+					width: 1px;
+					height: 5rem;
+					@include themed() {
+						background-color: t(var.$bg);
+					}
+				}
+			}
+		}
+	}
+}
+.invited-members {
+	.shadow-card {
+		.invite-container {
+			width: 100%;
+			.input-container {
+				@include flex-container(row, flex-start, center, nowrap);
+				width: 100%;
+			}
+		}
+		.members-container {
+			width: 100%;
+			.invited-card {
+				padding: 0.5rem;
+				margin: 0.25rem;
+				box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+				@include flex-container(row, flex-start, center, nowrap);
+				border-radius: 0.5rem;
+				overflow: hidden;
+				position: relative;
+				button {
+					float: right;
+				}
+				.tag {
+					position: absolute;
+					top: 0;
+					right: 0;
+					border-bottom-left-radius: 0.5rem;
+					p {
+						padding: 0.25rem;
+					}
+				}
+			}
+			.invited-card-new-user {
+				@extend .invited-card;
+				p {
+					padding: 0.5rem;
+				}
+				button {
+					float: right;
+				}
+				.tag {
+					@extend .tag;
+					@include themed() {
+						background-color: t(var.$fg);
+					}
+				}
+			}
+			.invited-card-found-user {
+				@extend .invited-card;
+				p {
+					padding: 0.5rem;
+				}
+				button {
+					float: right;
+				}
+				.tag {
+					@extend .tag;
+					@include themed() {
+						background-color: t(var.$primary-default);
+					}
+					p {
+						padding: 0.25rem;
+						@include themed() {
+							color: t(var.$light);
+						}
+					}
+				}
+			}
+		}
+	}
+}

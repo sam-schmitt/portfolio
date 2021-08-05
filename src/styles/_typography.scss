@@ -1,0 +1,143 @@
+@use 'var';
+@import "./colors";
+@import "./theme";
+@import "./mixins";
+
+// STYLE: TEXT
+.text {
+	padding: 0px 0px;
+	margin: 0px 0px;
+	@include themed() {
+		color: t(var.$text);
+	}
+}
+.extra-large {
+	@extend .text;
+	@include text(var.$font-title, var.$XXL);
+}
+.title {
+	@extend .text;
+	@include text(var.$font-title, var.$XL);
+}
+.subtitle {
+	@extend .text;
+	@include text(var.$font-title, var.$L);
+}
+.medium {
+	@extend .text;
+	@include text(var.$font-title, var.$M);
+}
+.button {
+	@extend .text;
+	@include text(var.$font-body, var.$button);
+}
+.default {
+	@extend .text;
+	@include text(var.$font-body, var.$default);
+}
+.small {
+	@extend .text;
+	@include text(var.$font-body, var.$S);
+}
+.extra-small {
+	@extend .text;
+	@include text(var.$font-body, var.$XS);
+}
+
+h1 {
+	@extend .extra-large;
+	@include themed() {
+		color: t(var.$text);
+	}
+}
+
+h2 {
+	@extend .title;
+	@include themed() {
+		color: t(var.$text);
+	}
+}
+
+h3 {
+	@extend .subtitle;
+	@include themed() {
+		color: t(var.$text);
+	}
+}
+
+h4 {
+	@extend .medium;
+	@include themed() {
+		color: t(var.$text);
+	}
+}
+h5 {
+	@extend .medium;
+	font-family: Roboto;
+	font-weight: 500;
+}
+h6 {
+	@extend .text;
+	@include text(var.$font-body, var.$button);
+	font-weight: 500;
+}
+
+p {
+	@extend .default;
+	@include themed() {
+		color: t(var.$text);
+	}
+}
+
+p.small {
+	@extend .small;
+	@include themed() {
+		color: t(var.$text);
+	}
+}
+
+p.extra-small {
+	@extend .extra-small;
+	@include themed() {
+		color: t(var.$text);
+	}
+}
+
+*.secondary {
+	@include themed() {
+		color: t(var.$text-secondary);
+	}
+}
+*.center {
+	text-align: center;
+}
+*.left {
+	text-align: left;
+}
+*.right {
+	text-align: right;
+}
+*.white {
+	@include themed() {
+		color: t(var.$light);
+	}
+}
+*.danger {
+	@include themed() {
+		color: t(var.$danger);
+	}
+}
+*.faded {
+	opacity: 0.75;
+}
+*.slicedID {
+	opacity: 0.6;
+}
+
+// STYLE: LINKS
+a {
+	@extend .default;
+	@include themed() {
+		color: t(var.$link);
+	}
+}
