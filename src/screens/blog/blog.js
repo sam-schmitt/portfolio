@@ -33,7 +33,6 @@ export default function Blog(props) {
 					display: "flex",
 					height: "90vh",
 					flexDirection: "column",
-					marginLeft: 20,
 				}}
 			>
 				{blogs.map(function (d, idx) {
