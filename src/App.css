@@ -5,8 +5,15 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	/* color: #fff; */
+	/* background-color: #011; */
 }
 .photo {
 	height: 60px;
 	width: 60px;
 }
+
+/* theme
+light: #738cff
+primary: #305fe2
+dark: #0036af */

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Switch, Route } from "react-router-dom";
-import NavBar from "../components/NavBar/index.js";
+import NavBar from "../components/NavBar/NavBar";
 import BlogRouter from "./blog.js";
 import ContactRouter from "./contact.js";
 import HomeRouter from "./home.js";

@@ -1,12 +1,8 @@
 import React from "react";
-import { Switch, Route, useRouteMatch } from "react-router-dom";
-import Home from "../screens/home/home";
+import { Switch, Route } from "react-router-dom";
 import Contact from "../screens/contact/contact";
-import NavBar from "../components/NavBar";
 
 function ContactRouter() {
-	let { path } = useRouteMatch();
-
 	return (
 		<div>
 			<Switch>

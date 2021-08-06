@@ -1,0 +1,24 @@
+.blog-card-container {
+	max-width: 700px;
+	overflow: hidden;
+	box-shadow: 0px, 0px, 15px, -5px;
+	border-radius: 20px;
+	margin: 20px;
+	/* border-width: 2px; */
+	border-color: #000;
+	background-color: #738cff;
+	color: #fff;
+	/* border-style: solid; */
+	padding: 10px;
+}
+.blog-image-container {
+	max-width: 200px;
+	overflow: hidden;
+	border-radius: 20px;
+	margin: 20px;
+}
+.blog-description-container {
+	max-width: 400px;
+	overflow: hidden;
+	margin: 20px;
+}

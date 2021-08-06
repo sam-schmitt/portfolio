@@ -1,6 +1,6 @@
 // screen where admins can change things about the group
 import React, { useState, useEffect } from "react";
-import BlogCard from "../../components/BlogCard";
+import BlogCard from "../../components/BlogCard/BlogCard";
 
 export default function Blog(props) {
 	const [blogs, setBlogs] = useState([]);
@@ -24,6 +24,7 @@ export default function Blog(props) {
 				display: "flex",
 				height: "90vh",
 				flexDirection: "column",
+				alignItems: "center",
 			}}
 		>
 			<h1 style={{ alignSelf: "center" }}>Blogs</h1>

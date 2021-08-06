@@ -1,6 +1,11 @@
 // screen where admins can change things about the group
 import React, { useEffect, useState } from "react";
-import BlogCard from "../../components/BlogCard";
+import BlogCard from "../../components/BlogCard/BlogCard.js";
+import Contacts from "../../components/Contacts/Contacts.js";
+import Name from "../../components/Name/Name.js";
+import Titles from "../../components/Titles/Titles.js";
+import Blog from "../blog/blog.js";
+import Projects from "../projects/projects";
 
 export default function Home(props) {
 	const [blog, setBlog] = useState({
@@ -34,8 +39,14 @@ export default function Home(props) {
 				padding: 10,
 			}}
 		>
-			<h1 style={{ alignSelf: "center" }}>Welcome</h1>
-			<div>
+			{/* <h1 style={{ alignSelf: "center" }}>Welcome</h1> */}
+			<Name />
+			<Titles />
+			<Contacts />
+			<Projects />
+			<Blog />
+
+			{/* <div>
 				<h2 style={subheader}>Latest Blog</h2>
 				<BlogCard
 					title={blog.title}
@@ -44,7 +55,7 @@ export default function Home(props) {
 					description={blog.description}
 					thumbnail={blog.thumbnail}
 				/>
-			</div>
+			</div> */}
 		</div>
 	);
 }

@@ -1,11 +1,8 @@
 import React from "react";
-import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Home from "../screens/home/home";
-import NavBar from "../components/NavBar";
 
 function HomeRouter() {
-	let { path } = useRouteMatch();
-
 	return (
 		<div>
 			<Switch>

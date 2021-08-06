@@ -1,6 +1,6 @@
 // screen where admins can change things about the group
 import React from "react";
-import ProjectCard from "../../components/ProjectCard";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import QuaeLogo from "../../assets/images/quaeLogo.png";
 
 export default function Home(props) {
@@ -11,6 +11,7 @@ export default function Home(props) {
 				height: "90vh",
 				flexDirection: "column",
 				padding: 10,
+				alignItems: "center",
 			}}
 		>
 			<h1 style={{ alignSelf: "center" }}>Projects</h1>
