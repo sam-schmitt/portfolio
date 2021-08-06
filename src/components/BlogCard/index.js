@@ -34,7 +34,11 @@ const BlogCard = ({ title, pubDate, link, description, thumbnail }) => {
 				<img
 					src={thumbnail}
 					alt={""}
-					style={{ maxWidth: 400, justifySelf: "center" }}
+					style={{
+						maxWidth: "400px",
+						justifySelf: "center",
+						overflow: "hidden",
+					}}
 				/>
 				<br />
 				<p>

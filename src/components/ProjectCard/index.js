@@ -11,7 +11,11 @@ const ProjectCard = ({ title, link, linkName, description, image }) => {
 				<img
 					src={image}
 					alt={""}
-					style={{ maxWidth: 400, justifySelf: "center" }}
+					style={{
+						maxWidth: "400px",
+						justifySelf: "center",
+						overflow: "hidden",
+					}}
 				/>
 				<br />
 				<p>{description}</p>
