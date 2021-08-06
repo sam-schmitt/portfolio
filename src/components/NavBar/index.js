@@ -7,13 +7,14 @@ import {
 	NavBtn,
 	NavBtnLink,
 } from "./NavBarElements";
+import logo from "../../assets/images/icon.png";
 
 const NavBar = () => {
 	return (
 		<>
 			<Nav>
 				<NavLink to='/'>
-					<h1>Sam Schmitt</h1>
+					<img className='photo' src={logo} alt={"logo"}></img>
 				</NavLink>
 				<Bars />
 				<NavMenu>
