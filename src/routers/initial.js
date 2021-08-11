@@ -2,10 +2,7 @@ import React from "react";
 
 import { Switch, Route } from "react-router-dom";
 import NavBar from "../components/NavBar/NavBar";
-import BlogRouter from "./blog.js";
-import ContactRouter from "./contact.js";
 import HomeRouter from "./home.js";
-import ProjectsRouter from "./projects.js";
 
 function App() {
 	return (
@@ -16,15 +13,6 @@ function App() {
 
 			<div className='container'>
 				<Switch>
-					<Route path='/blog'>
-						<BlogRouter />
-					</Route>
-					<Route path='/contact'>
-						<ContactRouter />
-					</Route>
-					<Route path='/projects'>
-						<ProjectsRouter />
-					</Route>
 					<Route path='/'>
 						<HomeRouter />
 					</Route>
