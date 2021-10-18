@@ -5,6 +5,7 @@ import {
 	FaInstagramSquare,
 	FaLinkedin,
 	FaGithubSquare,
+	FaMailBulk,
 } from "react-icons/fa";
 
 const Contacts = () => {

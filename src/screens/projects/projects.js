@@ -20,7 +20,7 @@ export default function Home(props) {
 					link={"https://quae.app"}
 					linkName={"quae.app"}
 					title='Quae'
-					description='The first community driven voting platfrom. Exclusive to the city of Hoboken, NJ. Currently available on the App Store, and PlayStore'
+					description='The first community driven voting platform. Exclusive to the city of Hoboken, NJ. Currently available on the App Store, and PlayStore'
 					image={QuaeLogo}
 				/>
 			</div>

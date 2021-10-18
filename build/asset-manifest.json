@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.4016e31c.chunk.css",
-    "main.js": "/static/js/main.43cc26f7.chunk.js",
-    "main.js.map": "/static/js/main.43cc26f7.chunk.js.map",
+    "main.css": "/static/css/main.35edd7da.chunk.css",
+    "main.js": "/static/js/main.ce9baf92.chunk.js",
+    "main.js.map": "/static/js/main.ce9baf92.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.385ec753.js",
     "runtime-main.js.map": "/static/js/runtime-main.385ec753.js.map",
     "static/js/2.b17fe14b.chunk.js": "/static/js/2.b17fe14b.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.1d6eb20b.chunk.js": "/static/js/3.1d6eb20b.chunk.js",
     "static/js/3.1d6eb20b.chunk.js.map": "/static/js/3.1d6eb20b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.4016e31c.chunk.css.map": "/static/css/main.4016e31c.chunk.css.map",
+    "static/css/main.35edd7da.chunk.css.map": "/static/css/main.35edd7da.chunk.css.map",
     "static/js/2.b17fe14b.chunk.js.LICENSE.txt": "/static/js/2.b17fe14b.chunk.js.LICENSE.txt",
     "static/media/icon.265a099d.png": "/static/media/icon.265a099d.png",
     "static/media/quaeLogo.7d879634.png": "/static/media/quaeLogo.7d879634.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.385ec753.js",
     "static/js/2.b17fe14b.chunk.js",
-    "static/css/main.4016e31c.chunk.css",
-    "static/js/main.43cc26f7.chunk.js"
+    "static/css/main.35edd7da.chunk.css",
+    "static/js/main.ce9baf92.chunk.js"
   ]
 }
