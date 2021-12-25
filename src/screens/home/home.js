@@ -1,61 +1,63 @@
-// screen where admins can change things about the group
 import React, { useEffect, useState } from "react";
-import BlogCard from "../../components/BlogCard/BlogCard.js";
 import Contacts from "../../components/Contacts/Contacts.js";
+import BlogsSection from "../../components/homeSections/blogs/blogs.js";
+import NFTsSection from "../../components/homeSections/nfts/nfts.js";
+import ProjectsSection from "../../components/homeSections/projects/projects.js";
 import Name from "../../components/Name/Name.js";
+import Logo from "../../components/NavBar/NavBar.js";
 import Titles from "../../components/Titles/Titles.js";
-import Blog from "../blog/blog.js";
-import Projects from "../projects/projects";
+import styles from "./home.module.css";
 
-export default function Home(props) {
-	const [blog, setBlog] = useState({
-		title: "",
-		link: "",
-		pubDate: "",
-		description: "",
-		thumbnail: "",
-	});
-
-	const rss2json =
-		"https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40samuelgschmitt";
+export default function Home() {
+	const [state, setState] = useState({ mobileView: false });
+	const { mobileView } = state;
 
 	useEffect(() => {
-		fetch(rss2json)
-			.then((res) => res.json())
-			.then((data) => {
-				setBlog(data.items[0]);
-			});
-	}, [rss2json]);
-	const subheader = {
-		marginTop: 20,
-		fontSize: 25,
-	};
+		const setResponsiveness = () => {
+			return window.innerWidth < 900
+				? setState((prevState) => ({ ...prevState, mobileView: true }))
+				: setState((prevState) => ({ ...prevState, mobileView: false }));
+		};
+
+		setResponsiveness();
+		window.addEventListener("resize", () => setResponsiveness());
+
+		return () => {
+			window.removeEventListener("resize", () => setResponsiveness());
+		};
+	}, []);
 	return (
-		<div
-			style={{
-				display: "flex",
-				height: "90vh",
-				flexDirection: "column",
-				padding: 10,
-			}}
-		>
-			{/* <h1 style={{ alignSelf: "center" }}>Welcome</h1> */}
-			<Name />
+		<div className={styles.homeContainer}>
 			<Titles />
 			<Contacts />
-			<Projects />
-			<Blog />
 
-			{/* <div>
-				<h2 style={subheader}>Latest Blog</h2>
-				<BlogCard
-					title={blog.title}
-					link={blog.link}
-					pubDate={blog.pubDate}
-					description={blog.description}
-					thumbnail={blog.thumbnail}
-				/>
-			</div> */}
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					justifyContent: "space-between",
+					...(mobileView && {
+						flexDirection: "column",
+						justifyContent: "center",
+						alignItems: "center",
+					}),
+				}}
+			>
+				<Name mobileView={mobileView} />
+				<Logo mobileView={mobileView} />
+			</div>
+			<div
+				style={{
+					display: "flex",
+					...(mobileView && {
+						flexDirection: "column",
+					}),
+					justifyContent: "center",
+				}}
+			>
+				<BlogsSection />
+				<ProjectsSection />
+			</div>
 		</div>
 	);
 }

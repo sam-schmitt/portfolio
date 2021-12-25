@@ -1,29 +1,40 @@
-// screen where admins can change things about the group
 import React from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import QuaeLogo from "../../assets/images/quaeLogo.png";
+import SubHeader from "../../components/shared/subheader/subheader";
+import SubFooter from "../../components/shared/subfooter/subfooter";
+import projectsArray from "../../data/projects";
 
-export default function Home(props) {
+export default function Projects(props) {
 	return (
-		<div
-			style={{
-				display: "flex",
-				height: "90vh",
-				flexDirection: "column",
-				padding: 10,
-				alignItems: "center",
-			}}
-		>
-			<h1 style={{ alignSelf: "center" }}>Projects</h1>
-			<div>
-				<ProjectCard
-					link={"https://quae.app"}
-					linkName={"quae.app"}
-					title='Quae'
-					description='The first community driven voting platform. Exclusive to the city of Hoboken, NJ. Currently available on the App Store, and PlayStore'
-					image={QuaeLogo}
-				/>
+		<>
+			<SubHeader />
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					padding: 10,
+					alignItems: "center",
+				}}
+			>
+				<h1 style={{ alignSelf: "center" }}>Projects</h1>
+				<div>
+					{projectsArray.map(function (d, idx) {
+						return (
+							<div key={idx} className='noBullet'>
+								<ProjectCard
+									link={d.link}
+									linkName={d.linkName}
+									title={d.title}
+									description={d.description}
+									image={d.image}
+								/>
+							</div>
+						);
+					})}
+				</div>
 			</div>
-		</div>
+			<SubFooter />
+		</>
 	);
 }

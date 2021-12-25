@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import logo from "../../assets/images/icon.png";
 
-const NavBar = () => {
+const NavBar = ({ mobileView }) => {
+	const imageSize = 500;
+
 	return (
 		<div
 			style={{
@@ -12,7 +14,22 @@ const NavBar = () => {
 				alignItems: "center",
 			}}
 		>
-			<img className='photo' src={logo} alt={"logo"}></img>
+			<img
+				style={{
+					...(!mobileView && {
+						height: imageSize,
+						width: imageSize,
+					}),
+					...(mobileView && {
+						height: 200,
+						width: 200,
+					}),
+					padding: 20,
+				}}
+				className='photo'
+				src={logo}
+				alt={"logo"}
+			/>
 		</div>
 	);
 };

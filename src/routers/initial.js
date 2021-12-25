@@ -7,10 +7,6 @@ import HomeRouter from "./home.js";
 function App() {
 	return (
 		<div className='app-container'>
-			<div className='navbar'>
-				<NavBar />
-			</div>
-
 			<div className='container'>
 				<Switch>
 					<Route path='/'>

@@ -1,18 +1,24 @@
 import React from "react";
-import "./name.css";
+import styles from "./name.module.css";
 
-const Name = () => {
+const Name = ({ mobileView }) => {
 	return (
 		<div
-			style={{
-				display: "flex",
-				padding: 10,
-				justifyContent: "space-between",
-				maxWidth: "50%",
-				alignSelf: "center",
-			}}
+			className={styles.nameContainer}
+			style={{ ...(!mobileView && { marginLeft: 50 }) }}
 		>
-			<p className='name'>Samuel Schmitt</p>
+			<p
+				className={styles.name}
+				style={{ ...(mobileView && { textAlign: "center" }) }}
+			>
+				Samuel Schmitt
+			</p>
+			<p
+				className={styles.sub}
+				style={{ ...(mobileView && { textAlign: "center" }) }}
+			>
+				Blockchain Web Developer
+			</p>
 		</div>
 	);
 };
