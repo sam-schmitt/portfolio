@@ -1,4 +1,5 @@
 import QuaeLogo from "../assets/images/quaeLogo.png";
+import COTMW from "../assets/images/cotmw.png";
 
 const projectsArray = [
 	{
@@ -8,6 +9,14 @@ const projectsArray = [
 		description:
 			"The first community driven voting platform. Exclusive to the city of Hoboken, NJ. Currently available on the App Store, and PlayStore",
 		image: QuaeLogo,
+	},
+	{
+		link: "https://citizensofthemilkyway.com",
+		linkName: "citizensofthemilkyway.com",
+		title: "Citizens of the Milky Way",
+		description:
+			"A first of its kind NFT Collection where each NFT character tells a part of a grand story.",
+		image: COTMW,
 	},
 	{
 		link: null,

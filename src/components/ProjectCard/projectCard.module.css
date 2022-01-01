@@ -1,6 +1,7 @@
-.card-container {
+.cardContainer {
 	max-width: 700px;
 	overflow: hidden;
+	background-color: #484848;
 	box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.94);
 	border-radius: 10px;
 	margin: 20px;
@@ -9,13 +10,13 @@
 	align-items: center;
 	justify-content: center;
 }
-.image-container {
+.imageContainer {
 	max-width: 200px;
 	overflow: hidden;
 	border-radius: 10px;
 	margin: 20px;
 }
-.description-container {
+.descriptionContainer {
 	max-width: 400px;
 	overflow: hidden;
 	margin: 20px;

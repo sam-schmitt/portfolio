@@ -6,14 +6,12 @@ import { Provider } from "./providers/Provider";
 import InitialRouter from "./routers/initial";
 function App() {
 	return (
-		<div>
-			<div>
-				<Router>
-					<Provider>
-						<InitialRouter />
-					</Provider>
-				</Router>
-			</div>
+		<div className='appContainer'>
+			<Router>
+				<Provider>
+					<InitialRouter />
+				</Provider>
+			</Router>
 		</div>
 	);
 }

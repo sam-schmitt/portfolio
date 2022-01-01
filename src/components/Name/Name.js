@@ -3,10 +3,7 @@ import styles from "./name.module.css";
 
 const Name = ({ mobileView }) => {
 	return (
-		<div
-			className={styles.nameContainer}
-			style={{ ...(!mobileView && { marginLeft: 50 }) }}
-		>
+		<div className={styles.nameContainer}>
 			<p
 				className={styles.name}
 				style={{ ...(mobileView && { textAlign: "center" }) }}
