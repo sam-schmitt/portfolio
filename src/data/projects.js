@@ -19,6 +19,13 @@ const projectsArray = [
 		image: COTMW,
 	},
 	{
+		link: "https://work-it-out-ef29f.web.app/",
+		linkName: "Work It Out",
+		title: "Work It Out",
+		description: "An exercise record planner",
+		image: null,
+	},
+	{
 		link: null,
 		linkName: null,
 		title: "SLSA",
