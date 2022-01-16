@@ -1,5 +1,6 @@
 import QuaeLogo from "../assets/images/quaeLogo.png";
 import COTMW from "../assets/images/cotmw.png";
+import WorkItOut from "../assets/images/logo.png";
 
 const projectsArray = [
 	{
@@ -11,6 +12,14 @@ const projectsArray = [
 		image: QuaeLogo,
 	},
 	{
+		link: "https://workitout.one/",
+		linkName: "workitout.one",
+		title: "Work It Out",
+		description:
+			"Track your reps, sets, and exercises in one easy to use web application. Generate routines and workout plans that you can share with your friends.",
+		image: WorkItOut,
+	},
+	{
 		link: "https://citizensofthemilkyway.com",
 		linkName: "citizensofthemilkyway.com",
 		title: "Citizens of the Milky Way",
@@ -18,18 +27,13 @@ const projectsArray = [
 			"A first of its kind NFT Collection where each NFT character tells a part of a grand story.",
 		image: COTMW,
 	},
-	{
-		link: "https://work-it-out-ef29f.web.app/",
-		linkName: "Work It Out",
-		title: "Work It Out",
-		description: "An exercise record planner",
-		image: null,
-	},
+
 	{
 		link: null,
 		linkName: null,
 		title: "SLSA",
-		description: "A Blockchain Based Student Lottery Service",
+		description:
+			"A Blockchain Based Student Lottery Service (under development)",
 		image: null,
 	},
 ];
