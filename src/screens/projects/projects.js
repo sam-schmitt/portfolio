@@ -28,6 +28,7 @@ export default function Projects(props) {
 									title={d.title}
 									description={d.description}
 									image={d.image}
+									tools={d.tools}
 								/>
 							</div>
 						);

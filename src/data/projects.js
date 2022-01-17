@@ -10,14 +10,41 @@ const projectsArray = [
 		description:
 			"The first community driven voting platform. Exclusive to the city of Hoboken, NJ. Currently available on the App Store, and PlayStore",
 		image: QuaeLogo,
+		tools: [
+			"JavaScript",
+			"OAuth",
+			"MongoDB",
+			"Mongoose",
+			"Express.js",
+			"Node.js",
+			"React.js",
+			"Material-UI",
+			"CSS",
+			"JWT",
+			"React Native",
+			"Expo",
+			"Firebase",
+		],
 	},
 	{
 		link: "https://workitout.one/",
 		linkName: "workitout.one",
 		title: "Work It Out",
 		description:
-			"Track your reps, sets, and exercises in one easy to use web application. Generate routines and workout plans that you can share with your friends.",
+			"Track your reps, sets, and exercises in one easy to use web application. Generate routines and workout plans that you can share with your friends. Currently available as a web application.",
 		image: WorkItOut,
+		tools: [
+			"JavaScript",
+			"OAuth",
+			"MongoDB",
+			"Mongoose",
+			"Express.js",
+			"Node.js",
+			"React.js",
+			"Material-UI",
+			"CSS",
+			"JWT",
+		],
 	},
 	{
 		link: "https://citizensofthemilkyway.com",
@@ -26,6 +53,7 @@ const projectsArray = [
 		description:
 			"A first of its kind NFT Collection where each NFT character tells a part of a grand story.",
 		image: COTMW,
+		tools: ["JavaScript", "Procreate"],
 	},
 
 	{
@@ -35,6 +63,7 @@ const projectsArray = [
 		description:
 			"A Blockchain Based Student Lottery Service (under development)",
 		image: null,
+		tools: [],
 	},
 ];
 

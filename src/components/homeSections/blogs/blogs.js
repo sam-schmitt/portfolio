@@ -43,7 +43,13 @@ export default function BlogsSection(props) {
 					<FiChevronRight />
 				</p>
 			</div>
-			<div style={{ display: "flex", flexDirection: "row" }}>
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+				}}
+			>
 				{blogs.map(function (d, idx) {
 					return (
 						<div key={idx} className='noBullet'>

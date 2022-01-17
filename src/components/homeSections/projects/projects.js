@@ -38,15 +38,14 @@ export default function ProjectsSection(props) {
 					<FiChevronRight />
 				</p>
 			</div>
-			<div>
-				<ProjectCard
-					link={projectsArray[0].link}
-					linkName={projectsArray[0].linkName}
-					title={projectsArray[0].title}
-					description={projectsArray[0].description}
-					image={projectsArray[0].image}
-				/>
-			</div>
+			<ProjectCard
+				link={projectsArray[0].link}
+				linkName={projectsArray[0].linkName}
+				title={projectsArray[0].title}
+				description={projectsArray[0].description}
+				image={projectsArray[0].image}
+				tools={projectsArray[0].tools}
+			/>
 		</div>
 	);
 }
