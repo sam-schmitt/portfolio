@@ -1,5 +1,7 @@
 import QuaeLogo from "../assets/images/quaeLogo.png";
 import COTMW from "../assets/images/cotmw.png";
+import SBLogo from "../assets/images/soundbites.png";
+
 import WorkItOut from "../assets/images/logo.png";
 
 const projectsArray = [
@@ -45,6 +47,14 @@ const projectsArray = [
 			"CSS",
 			"JWT",
 		],
+	},
+	{
+		link: "https://github.com/sam-schmitt/soundbites",
+		linkName: "GitHub",
+		title: "SoundBites",
+		description: "Easy to use sound-bite player using local folder paths.",
+		image: SBLogo,
+		tools: ["JavaScript", "React.js", "Material-UI", "CSS", "Electron"],
 	},
 	{
 		link: "https://citizensofthemilkyway.com",
