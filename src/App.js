@@ -3,13 +3,13 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "./providers/Provider";
-import InitialRouter from "./routers/initial";
+import HomeRouter from "./routers/home";
 function App() {
 	return (
 		<div className='appContainer'>
 			<Router>
 				<Provider>
-					<InitialRouter />
+					<HomeRouter />
 				</Provider>
 			</Router>
 		</div>

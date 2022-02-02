@@ -1,5 +1,5 @@
 import React from "react";
-import "./blogCard.css";
+import styles from "./blogCard.module.css";
 
 const BlogCard = ({ title, pubDate, link, description, thumbnail }) => {
 	function cleanTitle(checkTitle) {
@@ -27,15 +27,15 @@ const BlogCard = ({ title, pubDate, link, description, thumbnail }) => {
 	}
 	return (
 		<>
-			<div className='blog-card-container'>
+			<div className={styles.blogCardContainer}>
 				<h1 style={{ fontSize: "20px" }}>
 					{truncateText(cleanTitle(title), 0, 60)}
 				</h1>
-				<img src={thumbnail} alt={""} className='blog-image-container' />
+				<img src={thumbnail} alt={""} className={styles.blogImageContainer} />
 
 				<h4>{convertDate(pubDate)}</h4>
 
-				<div className='blog-text-container'>
+				<div className={styles.blogCardDescription}>
 					<p className='blog-text-container'>
 						{truncateText(toText(spaceAfterUnsplash(description)), 0, 300) +
 							"..."}

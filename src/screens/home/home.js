@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Contacts from "../../components/Contacts/Contacts.js";
 import BlogsSection from "../../components/homeSections/blogs/blogs.js";
-import NFTsSection from "../../components/homeSections/nfts/nfts.js";
 import ProjectsSection from "../../components/homeSections/projects/projects.js";
 import Name from "../../components/Name/Name.js";
 import Logo from "../../components/NavBar/NavBar.js";
 import Titles from "../../components/Titles/Titles.js";
 import styles from "./home.module.css";
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 export default function Home() {
 	const [state, setState] = useState({ mobileView: false });
@@ -27,7 +27,7 @@ export default function Home() {
 		};
 	}, []);
 	return (
-		<div className={styles.homeContainer}>
+		<FadeIn className={styles.homeContainer}>
 			<div
 				style={{
 					display: "flex",
@@ -71,6 +71,6 @@ export default function Home() {
 				<BlogsSection />
 				<ProjectsSection />
 			</div>
-		</div>
+		</FadeIn>
 	);
 }

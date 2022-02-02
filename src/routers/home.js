@@ -6,18 +6,20 @@ import Blogs from "../screens/blog/blog";
 
 function HomeRouter() {
 	return (
-		<div>
-			<Switch>
-				<Route path={"/blogs"}>
-					<Blogs />
-				</Route>
-				<Route path={"/projects"}>
-					<Projects />
-				</Route>
-				<Route path={"/"}>
-					<Home />
-				</Route>
-			</Switch>
+		<div className='app-container'>
+			<div className='container'>
+				<Switch>
+					<Route path={"/blogs"}>
+						<Blogs />
+					</Route>
+					<Route path={"/projects"}>
+						<Projects />
+					</Route>
+					<Route path={"/"}>
+						<Home />
+					</Route>
+				</Switch>
+			</div>
 		</div>
 	);
 }

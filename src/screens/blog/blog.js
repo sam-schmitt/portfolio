@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import SubFooter from "../../components/shared/subfooter/subfooter";
 import SubHeader from "../../components/shared/subheader/subheader";
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 export default function Blog(props) {
 	const [blogs, setBlogs] = useState([]);
@@ -20,7 +21,7 @@ export default function Blog(props) {
 	}, [rss2json]);
 
 	return (
-		<>
+		<FadeIn>
 			<SubHeader />
 			<div
 				style={{
@@ -53,6 +54,6 @@ export default function Blog(props) {
 				</div>
 			</div>
 			<SubFooter />
-		</>
+		</FadeIn>
 	);
 }

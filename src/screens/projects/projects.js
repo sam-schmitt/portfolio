@@ -4,10 +4,11 @@ import QuaeLogo from "../../assets/images/quaeLogo.png";
 import SubHeader from "../../components/shared/subheader/subheader";
 import SubFooter from "../../components/shared/subfooter/subfooter";
 import projectsArray from "../../data/projects";
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 export default function Projects(props) {
 	return (
-		<>
+		<FadeIn>
 			<SubHeader />
 			<div
 				style={{
@@ -36,6 +37,6 @@ export default function Projects(props) {
 				</div>
 			</div>
 			<SubFooter />
-		</>
+		</FadeIn>
 	);
 }
