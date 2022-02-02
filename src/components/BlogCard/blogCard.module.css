@@ -1,9 +1,5 @@
 .blogCardContainer {
-	max-width: 600px;
-	overflow: hidden;
-	background-color: #484848;
-	box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.94);
-	border-radius: 10px;
+	max-width: 1000px;
 	margin: 20px auto;
 	border-color: #000;
 	padding: 10px;
@@ -14,13 +10,28 @@
 .blogImageContainer {
 	display: flex;
 	align-self: center;
-	max-height: 200px;
+	width: 200px;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 5px;
 	margin: 20px;
 }
 .blogDescriptionContainer {
-	max-width: 400px;
+	width: 100%;
 	overflow: hidden;
-	margin: 20px;
+	background-color: #484848;
+	box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.94);
+	border-radius: 10px;
+	margin: 20px auto;
+	border-color: #000;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 800px;
+	align-self: center;
+}
+
+.content {
+	display: flex;
 }

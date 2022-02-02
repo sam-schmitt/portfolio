@@ -1,42 +1,32 @@
 import React from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import QuaeLogo from "../../assets/images/quaeLogo.png";
-import SubHeader from "../../components/shared/subheader/subheader";
-import SubFooter from "../../components/shared/subfooter/subfooter";
 import projectsArray from "../../data/projects";
-import FadeIn from "react-fade-in/lib/FadeIn";
 
-export default function Projects(props) {
+export default function Projects({ mobileView }) {
 	return (
-		<FadeIn>
-			<SubHeader />
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					padding: 10,
-					alignItems: "center",
-				}}
-			>
-				<h1 style={{ alignSelf: "center" }}>Projects</h1>
-				<div>
-					{projectsArray.map(function (d, idx) {
-						return (
-							<div key={idx} className='noBullet'>
-								<ProjectCard
-									link={d.link}
-									linkName={d.linkName}
-									title={d.title}
-									description={d.description}
-									image={d.image}
-									tools={d.tools}
-								/>
-							</div>
-						);
-					})}
-				</div>
-			</div>
-			<SubFooter />
-		</FadeIn>
+		<div
+			style={{
+				display: "flex",
+				flexDirection: "column",
+				maxWidth: 1000,
+				padding: 10,
+			}}
+		>
+			<h1 style={{ textAlign: "left" }}>Projects</h1>
+			{projectsArray.map(function (d, idx) {
+				return (
+					<ProjectCard
+						link={d.link}
+						linkName={d.linkName}
+						title={d.title}
+						description={d.description}
+						image={d.image}
+						tools={d.tools}
+						sections={d.sections}
+						mobileView={mobileView}
+					/>
+				);
+			})}
+		</div>
 	);
 }

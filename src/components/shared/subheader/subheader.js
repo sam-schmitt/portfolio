@@ -1,4 +1,5 @@
 import React from "react";
+import { FiChevronLeft } from "react-icons/fi";
 import { useHistory } from "react-router-dom";
 import Logo from "../../../assets/images/icon.png";
 
@@ -17,6 +18,7 @@ export default function SubHeader() {
 				cursor: "pointer",
 			}}
 		>
+			<FiChevronLeft style={{ height: 20 }} />
 			<img
 				src={Logo}
 				alt={""}

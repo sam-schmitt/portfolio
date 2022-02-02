@@ -22,7 +22,7 @@ export default function SubFooter() {
 				style={{ height: imageSize, width: imageSize }}
 			/>
 			<h1 style={{ marginLeft: 10 }}>Sam Schmitt</h1>
-			<p>2021</p>
+			<p>2022</p>
 			<Contacts />
 		</div>
 	);

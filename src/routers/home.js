@@ -12,9 +12,9 @@ function HomeRouter() {
 					<Route path={"/blogs"}>
 						<Blogs />
 					</Route>
-					<Route path={"/projects"}>
+					{/* <Route path={"/projects"}>
 						<Projects />
-					</Route>
+					</Route> */}
 					<Route path={"/"}>
 						<Home />
 					</Route>

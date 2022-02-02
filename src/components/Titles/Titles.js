@@ -15,9 +15,9 @@ const Titles = () => {
 		>
 			<p className={styles.title}>Web 3.0</p>
 			<p className={styles.title}>Blockchain</p>
-			<p className={styles.title}>Web Development</p>
 			<p className={styles.title}>Politics</p>
-			<p className={styles.title}>NFTs</p>
+
+			<p className={styles.title}>Web Development</p>
 		</div>
 	);
 };

@@ -28,14 +28,21 @@ const BlogCard = ({ title, pubDate, link, description, thumbnail }) => {
 	return (
 		<>
 			<div className={styles.blogCardContainer}>
-				<h1 style={{ fontSize: "20px" }}>
-					{truncateText(cleanTitle(title), 0, 60)}
-				</h1>
+				<a
+					href={link}
+					rel='noreferrer'
+					target='_blank'
+					style={{ color: "#ccc" }}
+				>
+					<h1 style={{ fontSize: "20px" }}>
+						{truncateText(cleanTitle(title), 0, 1000)}
+					</h1>
+				</a>
 				<img src={thumbnail} alt={""} className={styles.blogImageContainer} />
 
 				<h4>{convertDate(pubDate)}</h4>
 
-				<div className={styles.blogCardDescription}>
+				<div className={styles.blogDescriptionContainer}>
 					<p className='blog-text-container'>
 						{truncateText(toText(spaceAfterUnsplash(description)), 0, 300) +
 							"..."}

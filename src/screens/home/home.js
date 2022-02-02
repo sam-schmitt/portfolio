@@ -7,6 +7,8 @@ import Logo from "../../components/NavBar/NavBar.js";
 import Titles from "../../components/Titles/Titles.js";
 import styles from "./home.module.css";
 import FadeIn from "react-fade-in/lib/FadeIn";
+import Projects from "../projects/projects.js";
+import SubFooter from "../../components/shared/subfooter/subfooter.js";
 
 export default function Home() {
 	const [state, setState] = useState({ mobileView: false });
@@ -69,8 +71,20 @@ export default function Home() {
 				}}
 			>
 				<BlogsSection />
-				<ProjectsSection />
+				{/* <ProjectsSection /> */}
 			</div>
+			<div
+				style={{
+					display: "flex",
+					...(mobileView && {
+						flexDirection: "column",
+					}),
+					justifyContent: "center",
+				}}
+			>
+				<Projects mobileView={mobileView} />
+			</div>
+			<SubFooter />
 		</FadeIn>
 	);
 }
