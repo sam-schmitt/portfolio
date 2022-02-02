@@ -27,13 +27,14 @@ export default function BlogsSection(props) {
 					flexDirection: "row",
 					alignItems: "center",
 					justifyContent: "space-between",
+					cursor: "pointer",
+				}}
+				onClick={() => {
+					history.push("/blogs");
 				}}
 			>
 				<h1>Latest Blog</h1>
 				<p
-					onClick={() => {
-						history.push("/blogs");
-					}}
 					style={{
 						display: "flex",
 						alignItems: "center",

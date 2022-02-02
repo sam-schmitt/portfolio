@@ -22,13 +22,14 @@ export default function ProjectsSection(props) {
 					flexDirection: "row",
 					alignItems: "center",
 					justifyContent: "space-between",
+					cursor: "pointer",
+				}}
+				onClick={() => {
+					history.push("/projects");
 				}}
 			>
 				<h1>Projects</h1>
 				<p
-					onClick={() => {
-						history.push("/projects");
-					}}
 					style={{
 						display: "flex",
 						alignItems: "center",

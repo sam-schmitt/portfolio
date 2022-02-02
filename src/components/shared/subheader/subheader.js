@@ -14,6 +14,7 @@ export default function SubHeader() {
 				display: "flex",
 				padding: 10,
 				alignItems: "center",
+				cursor: "pointer",
 			}}
 		>
 			<img
