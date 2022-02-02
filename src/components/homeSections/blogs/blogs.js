@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import BlogCard from "../../BlogCard/BlogCard";
 import { FiChevronRight } from "react-icons/fi";
+import theme from "../../../constants/theme";
+import styles from "./styles.module.css";
 
 export default function BlogsSection(props) {
 	const [blogs, setBlogs] = useState([]);
@@ -24,11 +26,30 @@ export default function BlogsSection(props) {
 			style={{
 				padding: 10,
 				display: "flex",
+				flexDirection: "column",
 				width: "100%",
 				maxWidth: 1000,
 				justifyContent: "flex-start",
 			}}
 		>
+			{/* <div className={styles.button}>
+				<a
+					href='https://calendly.com/samuelschmitt/meeting-with-sam-schmitt?month=2022-02'
+					target='_blank'
+					rel='noreferrer'
+					style={{ color: "inherit", textDecoration: "none" }}
+				>
+					<h1
+						style={{
+							display: "flex",
+							alignItems: "center",
+						}}
+					>
+						Schedule a Meeting
+					</h1>
+				</a>
+			</div>
+			<br /> */}
 			<div
 				style={{
 					display: "flex",

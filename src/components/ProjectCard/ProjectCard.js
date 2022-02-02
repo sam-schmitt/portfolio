@@ -1,4 +1,5 @@
 import React from "react";
+import { FiChevronRight } from "react-icons/fi";
 import styles from "./projectCard.module.css";
 
 const ProjectCard = ({
@@ -13,8 +14,23 @@ const ProjectCard = ({
 }) => {
 	return (
 		<div className={styles.cardContainer}>
-			<a href={link} rel='noreferrer' target='_blank' style={{ color: "#fff" }}>
-				<h1 style={{ fontSize: 25 }}>{title}</h1>
+			<a
+				href={link}
+				rel='noreferrer'
+				target='_blank'
+				style={{ color: "#fff", textDecoration: "none" }}
+			>
+				<h1
+					style={{
+						display: "flex",
+						alignItems: "center",
+						fontSize: 25,
+						textAlign: "center",
+					}}
+				>
+					{title}
+					{link && <FiChevronRight />}
+				</h1>
 			</a>
 			<br />
 

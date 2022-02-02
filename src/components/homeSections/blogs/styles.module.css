@@ -1,0 +1,13 @@
+.button {
+	overflow: hidden;
+	background-color: #0036af;
+	box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.94);
+	border-radius: 10px;
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.button:hover {
+	background-color: white; /* Green */
+	color: black;
+}

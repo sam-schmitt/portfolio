@@ -29,11 +29,31 @@ const Name = ({ mobileView }) => {
 
 	return (
 		<div className={styles.nameContainer}>
-			<p
-				className={styles.name}
-				style={{ ...(mobileView && { textAlign: "center" }) }}
-			>
+			<p className={styles.name} style={{ textAlign: "center" }}>
 				Samuel Schmitt
+			</p>
+			<p
+				style={{
+					backgroundColor: theme.card,
+					borderRadius: 5,
+					paddingRight: 4,
+					paddingLeft: 4,
+					paddingTop: 1,
+					paddingBottom: 1,
+					marginRight: 4,
+					minWidth: 200,
+					display: "flex",
+					justifyContent: "center",
+					fontSize: 20,
+				}}
+			>
+				<TypewriterComponent
+					options={{
+						strings: list,
+						autoStart: true,
+						loop: true,
+					}}
+				/>
 			</p>
 			<p
 				className={styles.sub}
@@ -44,28 +64,6 @@ const Name = ({ mobileView }) => {
 					...(mobileView && { textAlign: "center" }),
 				}}
 			>
-				<p
-					style={{
-						backgroundColor: theme.card,
-						borderRadius: 5,
-						paddingRight: 4,
-						paddingLeft: 4,
-						paddingTop: 1,
-						paddingBottom: 1,
-						marginRight: 4,
-						minWidth: 200,
-						display: "flex",
-						justifyContent: "center",
-					}}
-				>
-					<TypewriterComponent
-						options={{
-							strings: list,
-							autoStart: true,
-							loop: true,
-						}}
-					/>
-				</p>
 				Developer
 			</p>
 		</div>
