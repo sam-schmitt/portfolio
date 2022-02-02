@@ -20,7 +20,15 @@ export default function BlogsSection(props) {
 	// }, [rss2json]);
 
 	return (
-		<div style={{ padding: 10, display: "flex", width: 1000 }}>
+		<div
+			style={{
+				padding: 10,
+				display: "flex",
+				width: "100%",
+				maxWidth: 1000,
+				justifyContent: "flex-start",
+			}}
+		>
 			<div
 				style={{
 					display: "flex",
@@ -40,7 +48,7 @@ export default function BlogsSection(props) {
 						alignItems: "center",
 					}}
 				>
-					Blogs
+					Blog
 					<FiChevronRight />
 				</h1>
 			</div>
