@@ -2,18 +2,17 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { FiChevronRight, FiChevronsDown } from "react-icons/fi";
 
-export default function BlogsSection() {
+export default function Links() {
 	const history = useHistory();
 
 	return (
 		<div
 			style={{
 				padding: 10,
-				display: "flex",
-				flexDirection: "column",
-				width: "100%",
-				maxWidth: 1000,
-				justifyContent: "flex-start",
+				justifyContent: "center",
+				alignItems: "center",
+				alignSelf: "center",
+				paddingBottom: 100,
 			}}
 		>
 			<div

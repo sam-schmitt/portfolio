@@ -1,9 +1,11 @@
 // screen where admins can change things about the group
 import React, { useState, useEffect } from "react";
-import BlogCard from "../../components/BlogCard/BlogCard";
+import BlogCard from "../../components/cardComponents/BlogCard/BlogCard";
 import SubFooter from "../../components/shared/subfooter/subfooter";
 import SubHeader from "../../components/shared/subheader/subheader";
 import FadeIn from "react-fade-in/lib/FadeIn";
+
+import "../home/home.scss";
 
 export default function Blog(props) {
 	const [blogs, setBlogs] = useState([]);
@@ -22,25 +24,12 @@ export default function Blog(props) {
 
 	return (
 		<FadeIn>
-			<SubHeader />
-			<div
-				style={{
-					padding: 10,
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-				}}
-			>
-				<h1 style={{ alignSelf: "center" }}>Blogs</h1>
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "column",
-					}}
-				>
+			<body>
+				<div className='container'>
 					{blogs.map(function (d, idx) {
 						return (
-							<div key={idx} className='noBullet'>
+							<section>
+								{idx === 0 && <SubHeader />}
 								<BlogCard
 									title={d.title}
 									link={d.link}
@@ -48,12 +37,16 @@ export default function Blog(props) {
 									description={d.description}
 									thumbnail={d.thumbnail}
 								/>
-							</div>
+							</section>
 						);
 					})}
+					{blogs.length > 0 && (
+						<section>
+							<SubFooter />
+						</section>
+					)}
 				</div>
-			</div>
-			<SubFooter />
+			</body>
 		</FadeIn>
 	);
 }

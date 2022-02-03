@@ -13,21 +13,9 @@ const ProjectCard = ({
 	mobileView,
 }) => {
 	return (
-		<div className={styles.cardContainer}>
-			<a
-				href={link}
-				rel='noreferrer'
-				target='_blank'
-				style={{ color: "#fff", textDecoration: "none" }}
-			>
-				<h1
-					style={{
-						display: "flex",
-						alignItems: "center",
-						fontSize: 25,
-						textAlign: "center",
-					}}
-				>
+		<div className={styles.page}>
+			<a href={link} rel='noreferrer' target='_blank' className={styles.title}>
+				<h1 className={styles.titleText}>
 					{title}
 					{link && <FiChevronRight />}
 				</h1>

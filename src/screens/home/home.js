@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Contacts from "../../components/Contacts/Contacts.js";
-import BlogsSection from "../../components/homeSections/blogs/blogs.js";
-import Name from "../../components/Name/Name.js";
-import Logo from "../../components/NavBar/NavBar.js";
-import Titles from "../../components/Titles/Titles.js";
-import styles from "./home.module.css";
 import FadeIn from "react-fade-in/lib/FadeIn";
-import Projects from "../projects/projects.js";
 import SubFooter from "../../components/shared/subfooter/subfooter.js";
+import Cover from "../../components/homeComponents/cover/cover.js";
+import projectsArray from "../../data/projects.js";
+import ProjectCard from "../../components/cardComponents/ProjectCard/ProjectCard.js";
+import "./home.scss";
 
 export default function Home() {
 	const [state, setState] = useState({ mobileView: false });
@@ -28,63 +25,33 @@ export default function Home() {
 		};
 	}, []);
 	return (
-		<div className={styles.homeContainer}>
-			<FadeIn>
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "row",
-						justifyContent: "space-between",
-						...(mobileView && {
-							flexDirection: "column",
-							justifyContent: "center",
-							alignItems: "center",
-						}),
-					}}
-				>
-					<Titles />
-					<Contacts />
+		<FadeIn>
+			<body>
+				<div className='container'>
+					<section>
+						<Cover mobileView={mobileView} />
+					</section>
+					{projectsArray.map(function (d, idx) {
+						return (
+							<section>
+								<ProjectCard
+									link={d.link}
+									linkName={d.linkName}
+									title={d.title}
+									description={d.description}
+									image={d.image}
+									tools={d.tools}
+									sections={d.sections}
+									mobileView={mobileView}
+								/>
+							</section>
+						);
+					})}
+					<section>
+						<SubFooter />
+					</section>
 				</div>
-
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "row",
-						justifyContent: "space-around",
-						...(mobileView && {
-							flexDirection: "column",
-							justifyContent: "center",
-							alignItems: "center",
-						}),
-					}}
-				>
-					<Name mobileView={mobileView} />
-					<Logo mobileView={mobileView} />
-				</div>
-				<div
-					style={{
-						display: "flex",
-						...(mobileView && {
-							flexDirection: "column",
-						}),
-						justifyContent: "center",
-					}}
-				>
-					<BlogsSection />
-				</div>
-				<div
-					style={{
-						display: "flex",
-						...(mobileView && {
-							flexDirection: "column",
-						}),
-						justifyContent: "center",
-					}}
-				>
-					<Projects mobileView={mobileView} />
-				</div>
-				<SubFooter />
-			</FadeIn>
-		</div>
+			</body>
+		</FadeIn>
 	);
 }

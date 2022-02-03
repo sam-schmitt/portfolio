@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Logo from "../../../assets/images/icon.png";
-import Contacts from "../../Contacts/Contacts";
+import Contacts from "../Contacts/Contacts";
 
 export default function SubFooter() {
 	const history = useHistory();

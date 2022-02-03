@@ -68,9 +68,9 @@ const projectsArray = [
 		tools: ["JavaScript", "React.js", "Material-UI", "CSS", "Electron"],
 		sections: {
 			problem:
-				"Those who wish to livestream content, are faced with expensive sound-bite managing equipment or software, when all they might need is a light application that will use local audio files on their device.",
+				"Those who wish to livestream content, are faced with expensive soundbite managing equipment or software, when all they might need is a light application that will use local audio files on their device.",
 			solution:
-				"One, free, easy-to-use desktop application that allows users play sound-bites to their livestream at zero cost.",
+				"One, free, easy-to-use desktop application that allows users to play soundbites to their livestream at zero cost.",
 			product:
 				"A light desktop application where users can choose a local path that houses their audio files, to be easily searched and played in seconds.",
 		},

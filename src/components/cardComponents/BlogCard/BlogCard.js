@@ -26,38 +26,35 @@ const BlogCard = ({ title, pubDate, link, description, thumbnail }) => {
 		return `${dateArray.join("/")}`;
 	}
 	return (
-		<>
-			<div className={styles.blogCardContainer}>
+		<div className={styles.container}>
+			<a
+				href={link}
+				rel='noreferrer'
+				target='_blank'
+				className={styles.title}
+				style={{ color: "white" }}
+			>
+				<h1>{truncateText(cleanTitle(title), 0, 1000)}</h1>
+			</a>
+			<img src={thumbnail} alt={""} className={styles.image} />
+
+			<h4 className={styles.date}>{convertDate(pubDate)}</h4>
+
+			<div className={styles.description}>
+				<p>
+					{truncateText(toText(spaceAfterUnsplash(description)), 0, 300) +
+						"..."}
+				</p>
 				<a
 					href={link}
 					rel='noreferrer'
 					target='_blank'
 					style={{ color: "#ccc" }}
 				>
-					<h1 style={{ fontSize: "20px" }}>
-						{truncateText(cleanTitle(title), 0, 1000)}
-					</h1>
+					Read More
 				</a>
-				<img src={thumbnail} alt={""} className={styles.blogImageContainer} />
-
-				<h4>{convertDate(pubDate)}</h4>
-
-				<div className={styles.blogDescriptionContainer}>
-					<p className='blog-text-container'>
-						{truncateText(toText(spaceAfterUnsplash(description)), 0, 300) +
-							"..."}
-					</p>
-					<a
-						href={link}
-						rel='noreferrer'
-						target='_blank'
-						style={{ color: "#ccc" }}
-					>
-						Read More
-					</a>
-				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

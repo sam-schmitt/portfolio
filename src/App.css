@@ -5,21 +5,17 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	-ms-overflow-style: none;
+
 	/* color: #fff; */
 	/* background-color: #011; */
 }
+::-webkit-scrollbar {
+	display: none;
+}
 .appContainer {
-	display: flex;
-	flex-direction: column;
-	padding: 10;
 	background-color: #212121;
 	color: white;
-	min-height: 100vh;
-}
-
-.photo {
-	height: 60px;
-	width: 60px;
 }
 
 /* theme
