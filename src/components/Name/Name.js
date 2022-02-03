@@ -43,7 +43,6 @@ const Name = ({ mobileView }) => {
 					marginRight: 4,
 					minWidth: 200,
 					display: "flex",
-					justifyContent: "center",
 					fontSize: 20,
 				}}
 			>
@@ -52,6 +51,7 @@ const Name = ({ mobileView }) => {
 						strings: list,
 						autoStart: true,
 						loop: true,
+						delay: 150,
 					}}
 				/>
 			</p>

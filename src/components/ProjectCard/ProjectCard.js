@@ -32,9 +32,9 @@ const ProjectCard = ({
 					{link && <FiChevronRight />}
 				</h1>
 			</a>
-			<br />
 
 			<div
+				className={styles.content}
 				style={{
 					display: "flex",
 					...(mobileView && { flexDirection: "column" }),
@@ -43,7 +43,6 @@ const ProjectCard = ({
 				<img src={image} alt={""} className={styles.imageContainer} />
 				{description && (
 					<div className={styles.sectionsContainer}>
-						{" "}
 						<p>{description}</p>
 					</div>
 				)}
@@ -90,7 +89,6 @@ const ProjectCard = ({
 						</div>
 					</div>
 				)}
-				<br />
 			</div>
 		</div>
 	);

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Contacts from "../../components/Contacts/Contacts.js";
 import BlogsSection from "../../components/homeSections/blogs/blogs.js";
-import ProjectsSection from "../../components/homeSections/projects/projects.js";
 import Name from "../../components/Name/Name.js";
 import Logo from "../../components/NavBar/NavBar.js";
 import Titles from "../../components/Titles/Titles.js";
@@ -29,62 +28,63 @@ export default function Home() {
 		};
 	}, []);
 	return (
-		<FadeIn className={styles.homeContainer}>
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "row",
-					justifyContent: "space-between",
-					...(mobileView && {
-						flexDirection: "column",
-						justifyContent: "center",
-						alignItems: "center",
-					}),
-				}}
-			>
-				<Titles />
-				<Contacts />
-			</div>
+		<div className={styles.homeContainer}>
+			<FadeIn>
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "row",
+						justifyContent: "space-between",
+						...(mobileView && {
+							flexDirection: "column",
+							justifyContent: "center",
+							alignItems: "center",
+						}),
+					}}
+				>
+					<Titles />
+					<Contacts />
+				</div>
 
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "row",
-					justifyContent: "space-around",
-					...(mobileView && {
-						flexDirection: "column",
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "row",
+						justifyContent: "space-around",
+						...(mobileView && {
+							flexDirection: "column",
+							justifyContent: "center",
+							alignItems: "center",
+						}),
+					}}
+				>
+					<Name mobileView={mobileView} />
+					<Logo mobileView={mobileView} />
+				</div>
+				<div
+					style={{
+						display: "flex",
+						...(mobileView && {
+							flexDirection: "column",
+						}),
 						justifyContent: "center",
-						alignItems: "center",
-					}),
-				}}
-			>
-				<Name mobileView={mobileView} />
-				<Logo mobileView={mobileView} />
-			</div>
-			<div
-				style={{
-					display: "flex",
-					...(mobileView && {
-						flexDirection: "column",
-					}),
-					justifyContent: "center",
-				}}
-			>
-				<BlogsSection />
-				{/* <ProjectsSection /> */}
-			</div>
-			<div
-				style={{
-					display: "flex",
-					...(mobileView && {
-						flexDirection: "column",
-					}),
-					justifyContent: "center",
-				}}
-			>
-				<Projects mobileView={mobileView} />
-			</div>
-			<SubFooter />
-		</FadeIn>
+					}}
+				>
+					<BlogsSection />
+				</div>
+				<div
+					style={{
+						display: "flex",
+						...(mobileView && {
+							flexDirection: "column",
+						}),
+						justifyContent: "center",
+					}}
+				>
+					<Projects mobileView={mobileView} />
+				</div>
+				<SubFooter />
+			</FadeIn>
+		</div>
 	);
 }
