@@ -8,18 +8,16 @@ export default function Projects({ mobileView }) {
 		<div className={styles.container}>
 			{projectsArray.map(function (d, idx) {
 				return (
-					<div className={styles.card}>
-						<ProjectCard
-							link={d.link}
-							linkName={d.linkName}
-							title={d.title}
-							description={d.description}
-							image={d.image}
-							tools={d.tools}
-							sections={d.sections}
-							mobileView={mobileView}
-						/>
-					</div>
+					<ProjectCard
+						link={d.link}
+						linkName={d.linkName}
+						title={d.title}
+						description={d.description}
+						image={d.image}
+						tools={d.tools}
+						sections={d.sections}
+						mobileView={mobileView}
+					/>
 				);
 			})}
 		</div>
