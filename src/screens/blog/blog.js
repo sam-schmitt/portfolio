@@ -18,7 +18,6 @@ export default function Blog(props) {
 			.then((res) => res.json())
 			.then((data) => {
 				setBlogs(data.items);
-				console.log(data.items[0]);
 			});
 	}, [rss2json]);
 
@@ -36,6 +35,7 @@ export default function Blog(props) {
 									pubDate={d.pubDate}
 									description={d.description}
 									thumbnail={d.thumbnail}
+									d={d}
 								/>
 							</section>
 						);
