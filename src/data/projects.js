@@ -1,6 +1,7 @@
 import QuaeLogo from "../assets/images/quaeLogo.png";
 import COTMW from "../assets/images/cotmw.png";
 import SBLogo from "../assets/images/soundbites.png";
+import Cabal from "../assets/images/cabal.png";
 
 import WorkItOut from "../assets/images/logo.png";
 
@@ -12,18 +13,18 @@ const projectsArray = [
 		image: QuaeLogo,
 		tools: [
 			"JavaScript",
-			"OAuth",
 			"MongoDB",
 			"Mongoose",
 			"Express.js",
 			"Node.js",
 			"React.js",
-			"Material-UI",
+			"Chakra-UI",
 			"CSS",
 			"JWT",
 			"React Native",
 			"Expo",
 			"Firebase",
+			"Next.js",
 		],
 		sections: {
 			problem:
@@ -47,7 +48,7 @@ const projectsArray = [
 			"Express.js",
 			"Node.js",
 			"React.js",
-			"Material-UI",
+			"Chakra-UI",
 			"CSS",
 			"JWT",
 		],
@@ -73,6 +74,34 @@ const projectsArray = [
 				"One, free, easy-to-use desktop application that allows users to play soundbites to their livestream at zero cost.",
 			product:
 				"A light desktop application where users can choose a local path that houses their audio files, to be easily searched and played in seconds.",
+		},
+	},
+	{
+		link: "https://cabal-2tzrt2jh8-marcusats.vercel.app",
+		linkName: "Temporary Site",
+		title: "Cabal Protocol",
+		image: Cabal,
+		tools: [
+			"JavaScript",
+			"React.js",
+			"Chakra-UI",
+			"CSS",
+			"Solidity",
+			"Remix",
+			"Polygon",
+			"Vercel",
+			"WalletConnect",
+			"WorldCoin",
+			"RainbowKit",
+			"IPFS",
+		],
+		sections: {
+			problem:
+				"Users who are onboarded on an application are asked countless times to offer their data not knowing where it will be used or possible sold. Developers may lose potential users during this process.",
+			solution:
+				"Utilize Web3 level security to authenticate new users without developers having to handle their data.",
+			product:
+				"A Web3 connection provider that standardizes data collection so that all users can prevent a company from having total control over their data.",
 		},
 	},
 	{
