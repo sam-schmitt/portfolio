@@ -63,7 +63,7 @@ const Cover = ({ mobileView }) => {
 							paddingTop: 1,
 							paddingBottom: 1,
 							marginRight: 4,
-							minWidth: 200,
+							// minWidth: 200,
 							display: "flex",
 							fontSize: 20,
 						}}

@@ -36,6 +36,34 @@ const projectsArray = [
 		},
 	},
 	{
+		link: "https://ethglobal.com/showcase/cabal-jgj8g",
+		linkName: "Temporary Site",
+		title: "Cabal Protocol",
+		image: Cabal,
+		tools: [
+			"JavaScript",
+			"React.js",
+			"Chakra-UI",
+			"CSS",
+			"Solidity",
+			"Remix",
+			"Polygon",
+			"Vercel",
+			"WalletConnect",
+			"WorldCoin",
+			"RainbowKit",
+			"IPFS",
+		],
+		sections: {
+			problem:
+				"Users who are onboarded on an application are asked countless times to offer their data not knowing where it will be used or possible sold. Developers may lose potential users during this process.",
+			solution:
+				"Utilize Web3 level security to authenticate new users without developers having to handle their data.",
+			product:
+				"A Web3 connection provider that standardizes data collection so that all users can prevent a company from having total control over their data.",
+		},
+	},
+	{
 		link: "https://workitout.one/",
 		linkName: "workitout.one",
 		title: "Work It Out",
@@ -76,34 +104,7 @@ const projectsArray = [
 				"A light desktop application where users can choose a local path that houses their audio files, to be easily searched and played in seconds.",
 		},
 	},
-	{
-		link: "https://cabal-2tzrt2jh8-marcusats.vercel.app",
-		linkName: "Temporary Site",
-		title: "Cabal Protocol",
-		image: Cabal,
-		tools: [
-			"JavaScript",
-			"React.js",
-			"Chakra-UI",
-			"CSS",
-			"Solidity",
-			"Remix",
-			"Polygon",
-			"Vercel",
-			"WalletConnect",
-			"WorldCoin",
-			"RainbowKit",
-			"IPFS",
-		],
-		sections: {
-			problem:
-				"Users who are onboarded on an application are asked countless times to offer their data not knowing where it will be used or possible sold. Developers may lose potential users during this process.",
-			solution:
-				"Utilize Web3 level security to authenticate new users without developers having to handle their data.",
-			product:
-				"A Web3 connection provider that standardizes data collection so that all users can prevent a company from having total control over their data.",
-		},
-	},
+
 	{
 		link: "https://citizensofthemilkyway.com",
 		linkName: "citizensofthemilkyway.com",

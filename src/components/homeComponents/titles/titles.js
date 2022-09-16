@@ -2,13 +2,7 @@ import React from "react";
 import styles from "./titles.module.css";
 
 const Titles = () => {
-	const data = [
-		"Web 3.0",
-		"Blockchain",
-		"Politics",
-		"Software",
-		"Entrepreneur",
-	];
+	const data = ["Entrepreneur", "Founder", "Engineer", "Developer", "Student"];
 	return (
 		<div
 			style={{
