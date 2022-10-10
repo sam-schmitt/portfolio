@@ -2,6 +2,7 @@ import QuaeLogo from "../assets/images/quaeLogo.png";
 import COTMW from "../assets/images/cotmw.png";
 import SBLogo from "../assets/images/soundbites.png";
 import Cabal from "../assets/images/cabal.png";
+import TapMe from "../assets/images/tapme.png";
 
 import WorkItOut from "../assets/images/logo.png";
 
@@ -36,6 +37,36 @@ const projectsArray = [
 		},
 	},
 	{
+		link: "https://ethglobal.com/showcase/tap-contacts-s3ds7",
+		linkName: "Temporary Site",
+		title: "Tap Me",
+		image: TapMe,
+		tools: [
+			"JavaScript",
+			"React.js",
+			"Next.js",
+			"React Native",
+			"Expo",
+			"Chakra-UI",
+			"CSS",
+			"Solidity",
+			"Remix",
+			"Polygon",
+			"WalletConnect",
+			"Web3Auth",
+			"WorldCoin",
+			"IPFS",
+		],
+		sections: {
+			problem:
+				"Wallet addresses complicate transactions so that every time two people facilitate a transaction they always need to share their address and make sure they type it in correctly.",
+			solution:
+				"Utilize Web3 level security to provide users ownership over their contact list to remember who they've sent transactions to and utilize their own personal naming conventions.",
+			product:
+				"A mobile application where users are onboarded using their existing social accounts or import their previous wallets. From this app they can send transactions and add new contacts by sending links or QR codes.",
+		},
+	},
+	{
 		link: "https://ethglobal.com/showcase/cabal-jgj8g",
 		linkName: "Temporary Site",
 		title: "Cabal Protocol",
@@ -56,7 +87,7 @@ const projectsArray = [
 		],
 		sections: {
 			problem:
-				"Users who are onboarded on an application are asked countless times to offer their data not knowing where it will be used or possible sold. Developers may lose potential users during this process.",
+				"Users who are onboarded on an application are asked countless times to offer their data not knowing where it will be used or possible sold. Developers may lose potential users during this process.				",
 			solution:
 				"Utilize Web3 level security to authenticate new users without developers having to handle their data.",
 			product:
