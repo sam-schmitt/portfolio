@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.28ee4bc5.chunk.css",
-    "main.js": "/static/js/main.5b5e9931.chunk.js",
-    "main.js.map": "/static/js/main.5b5e9931.chunk.js.map",
+    "main.js": "/static/js/main.78447d22.chunk.js",
+    "main.js.map": "/static/js/main.78447d22.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4c95b812.js",
     "runtime-main.js.map": "/static/js/runtime-main.4c95b812.js.map",
     "static/js/2.9c936c5d.chunk.js": "/static/js/2.9c936c5d.chunk.js",
@@ -15,9 +15,11 @@
     "static/css/main.28ee4bc5.chunk.css.map": "/static/css/main.28ee4bc5.chunk.css.map",
     "static/js/2.9c936c5d.chunk.js.LICENSE.txt": "/static/js/2.9c936c5d.chunk.js.LICENSE.txt",
     "static/media/cabal.fe328c4b.png": "/static/media/cabal.fe328c4b.png",
+    "static/media/caballabs.2309ad01.png": "/static/media/caballabs.2309ad01.png",
     "static/media/cotmw.a1df0185.png": "/static/media/cotmw.a1df0185.png",
     "static/media/icon.265a099d.png": "/static/media/icon.265a099d.png",
     "static/media/logo.e0aa87a2.png": "/static/media/logo.e0aa87a2.png",
+    "static/media/party-pro.9a1ee118.png": "/static/media/party-pro.9a1ee118.png",
     "static/media/quaeLogo.7d879634.png": "/static/media/quaeLogo.7d879634.png",
     "static/media/soundbites.bd166d6c.png": "/static/media/soundbites.bd166d6c.png",
     "static/media/tapme.18c51f18.png": "/static/media/tapme.18c51f18.png"
@@ -26,6 +28,6 @@
     "static/js/runtime-main.4c95b812.js",
     "static/js/2.9c936c5d.chunk.js",
     "static/css/main.28ee4bc5.chunk.css",
-    "static/js/main.5b5e9931.chunk.js"
+    "static/js/main.78447d22.chunk.js"
   ]
 }

@@ -2,9 +2,12 @@ import QuaeLogo from "../assets/images/quaeLogo.png";
 import COTMW from "../assets/images/cotmw.png";
 import SBLogo from "../assets/images/soundbites.png";
 import Cabal from "../assets/images/cabal.png";
+import CabalLabs from "../assets/images/caballabs.png";
+
 import TapMe from "../assets/images/tapme.png";
 
 import WorkItOut from "../assets/images/logo.png";
+import PartyPro from "../assets/images/party-pro.png";
 
 const projectsArray = [
 	{
@@ -34,6 +37,47 @@ const projectsArray = [
 				"We needed to make it possible for members of a large organization to find the right path to make a difference. We also needed to find ways for the community to work together to find each other's common interests.",
 			product:
 				"A full stack web and mobile application. The web application allows for administrators to easily post proposals that pass through the qualifying phases so that they may be made into law. Ordinary members may propose  ideas that can be voted on by everyone, allowing for a fully transparent suggestive process.",
+		},
+	},
+	{
+		link: "https://caballabs.com",
+		linkName: "Site",
+		title: "Cabal Labs",
+		image: CabalLabs,
+		tools: ["Web3", "Blockchain", "Product Management", "Research"],
+		sections: {
+			problem:
+				"There are antiquated systems in this world that need modern technical solutions.",
+			solution:
+				"Our goal is to make a better world by improving the distribution, access, and management of resources in society.",
+			product:
+				"Liberatio per technologiam directly translates to “liberation through technology”. It means that we have the ability to use technology to free ourselves from oppressive situations and to improve our lives in ways we can’t yet even fathom.",
+		},
+	},
+	{
+		link: null,
+		linkName: null,
+		title: "Party Pro",
+		image: PartyPro,
+		tools: [
+			"React Native",
+			"Expo",
+			"MongoDB",
+			"Mongoose",
+			"AWS-S3",
+			"Express",
+			"Node",
+			"Cron Jobs",
+			"Figma",
+			"Chakra-UI",
+		],
+		sections: {
+			problem:
+				"During a social event, groups of people can be having such a fun time that they end the night forgetting to take any photos, or people were just too nervous to ask to take a picture with everyone. Therefore, there are no documented memories of the fun time.",
+			solution:
+				"There needs to be an non-intrusive way to keep people reminded to take photos while also uplifting the vibe and energy of the event.",
+			product:
+				"A mobile application where hosts can organize their event and attendees and once the software is started, then groups of people will be randomly notified to take pictures with each other or to take pictures of themselves.",
 		},
 	},
 	{
@@ -135,17 +179,24 @@ const projectsArray = [
 				"A light desktop application where users can choose a local path that houses their audio files, to be easily searched and played in seconds.",
 		},
 	},
-
 	{
 		link: "https://citizensofthemilkyway.com",
 		linkName: "citizensofthemilkyway.com",
 		title: "Citizens of the Milky Way",
-		description:
-			"A first of its kind NFT Collection where each NFT character tells a part of a grand story.",
 		image: COTMW,
-		tools: ["JavaScript", "Procreate"],
+		tools: ["JavaScript", "Procreate", "OpenSea"],
+		sections: {
+			problem:
+				"I wanted to find a way to tell a story that I was curious to write while also learning how to generate automatic layer-based art in scripts.",
+			solution:
+				"A JavaScript file that created a massive amount of characters that I began to write short stories for.",
+			product:
+				"A first of its kind NFT Collection where each NFT character tells a part of a grand story.",
+		},
 	},
+];
 
+let otherProjects = [
 	{
 		link: null,
 		linkName: null,
