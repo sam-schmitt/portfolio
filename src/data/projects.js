@@ -7,7 +7,7 @@ import CabalLabs from "../assets/images/caballabs.png";
 import TapMe from "../assets/images/tapme.png";
 
 import WorkItOut from "../assets/images/logo.png";
-import PartyPro from "../assets/images/party-pro.png";
+import SmileMore from "../assets/images/smile-more.png";
 
 const projectsArray = [
 	{
@@ -55,10 +55,10 @@ const projectsArray = [
 		},
 	},
 	{
-		link: null,
-		linkName: null,
-		title: "Party Pro",
-		image: PartyPro,
+		link: "https://party.samschmitt.net",
+		linkName: "Temp Site",
+		title: "Smile More",
+		image: SmileMore,
 		tools: [
 			"React Native",
 			"Expo",
@@ -70,6 +70,7 @@ const projectsArray = [
 			"Cron Jobs",
 			"Figma",
 			"Chakra-UI",
+			"Next.js",
 		],
 		sections: {
 			problem:
