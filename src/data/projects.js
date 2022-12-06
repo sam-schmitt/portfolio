@@ -8,6 +8,7 @@ import TapMe from "../assets/images/tapme.png";
 
 import WorkItOut from "../assets/images/logo.png";
 import SmileMore from "../assets/images/smile-more.png";
+import FutureYou from "../assets/images/FutureYou.png";
 
 const projectsArray = [
 	{
@@ -52,6 +53,21 @@ const projectsArray = [
 				"Our goal is to make a better world by improving the distribution, access, and management of resources in society.",
 			product:
 				"Liberatio per technologiam directly translates to “liberation through technology”. It means that we have the ability to use technology to free ourselves from oppressive situations and to improve our lives in ways we can’t yet even fathom.",
+		},
+	},
+	{
+		link: "https://github.com/sam-schmitt/TIAA-hackathon-december-2022",
+		linkName: "GitHub",
+		title: "Future You",
+		image: FutureYou,
+		tools: ["React", "Next.js"],
+		sections: {
+			problem:
+				"With so much going on in the world, it is growing increasing difficult for people to stay focused on their retirement plan.",
+			solution:
+				"It is up to organizations like TIAA to innovate in their ability to maintain their participants attention.",
+			product:
+				"We allow participants to create a custom experience where they can create and check in on their future self as the primary visualizer of their retirement fund.",
 		},
 	},
 	{
